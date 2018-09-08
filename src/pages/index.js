@@ -74,7 +74,7 @@ const logo__container = css`
   }
 
   @media (min-width: 1200px) {
-    font-size: 6.75rem;
+    font-size: 7rem;
     letter-spacing: -1px;
     padding-bottom: 10px;
   }

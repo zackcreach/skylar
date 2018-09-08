@@ -49,22 +49,22 @@ IndexLayout.propTypes = {
 
 export const query = graphql`
   query HeadshotImages {
-    first: imageSharp(id: { regex: "/1020/" }) {
+    first: imageSharp(id: { regex: "/0067/" }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }
     }
-    second: imageSharp(id: { regex: "/1200/" }) {
+    second: imageSharp(id: { regex: "/0135/" }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }
     }
-    third: imageSharp(id: { regex: "/1217/" }) {
+    third: imageSharp(id: { regex: "/0277/" }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }
     }
-    fourth: imageSharp(id: { regex: "/1265/" }) {
+    fourth: imageSharp(id: { regex: "/0169/" }) {
       sizes(maxWidth: 600) {
         ...GatsbyImageSharpSizes
       }

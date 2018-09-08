@@ -10,18 +10,23 @@ import Transition from '../components/transition'
 
 class Resume extends React.Component {
   state = {
-    width: null,
+    width: 400,
     in: true,
   }
   componentDidMount() {
+    this.handleResize()
+    window.addEventListener('resize', this.handleResize)
+  }
+  handleResize = () => {
     this.setState({
-      width: this.container.offsetWidth,
+      width: this.container.offsetWidth || window.innerWidth,
     })
   }
   componentWillUnmount() {
     this.setState({
       in: false,
     })
+    window.removeEventListener('resize', this.handleResize)
   }
   render() {
     return (

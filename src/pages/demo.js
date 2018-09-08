@@ -1,54 +1,69 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
-import '../styles/styles.scss';
-import styled, { css } from 'emotion';
+import '../styles/styles.scss'
+import styled, { css } from 'emotion'
 
-import Header from '../layouts/header';
-import Content from '../layouts/content';
-import Transition from '../components/transition';
+import Header from '../layouts/header'
+import Content from '../layouts/content'
+import Transition from '../components/transition'
 
 class Demo extends React.Component {
   state = {
-    width: null,
-    in: true
+    width: 400,
+    in: true,
   }
   componentDidMount() {
+    this.handleResize()
+    window.addEventListener('resize', this.handleResize)
+  }
+  handleResize = () => {
     this.setState({
-      width: this.container.offsetWidth
+      width: this.container.offsetWidth || window.innerWidth,
     })
   }
   componentWillUnmount() {
     this.setState({
-      in: false
+      in: false,
     })
+    window.removeEventListener('resize', this.handleResize)
   }
   render() {
     return (
       <section>
         <Header headerWidth={this.state.width} />
         <Transition show={this.state.in}>
-          <div ref={node => this.container = node}>
+          <div ref={node => (this.container = node)}>
             <Content>
               <h2>Demo</h2>
-              <iframe className={iframe} src="https://www.youtube.com/embed/1DYbD3r2Mvs" allowFullScreen></iframe>
-              <iframe className={iframe} src="https://www.youtube.com/embed/1PAjsbAHoB0" allowFullScreen></iframe>	
+              <iframe
+                className={iframe}
+                src="https://www.youtube.com/embed/eF5fNyDVHaI"
+                allowFullScreen
+              />
+              <iframe
+                className={iframe}
+                src="https://www.youtube.com/embed/EUxu71yZB08"
+                allowFullScreen
+              />
+              <iframe
+                className={iframe}
+                src="https://www.youtube.com/embed/M8oGZ42Tw-Q"
+                allowFullScreen
+              />
             </Content>
-          </div>  
+          </div>
         </Transition>
       </section>
     )
   }
 }
 
-export default Demo;
+export default Demo
 
 const iframe = css`
   width: 100%;
   height: 350px;
   border: 0;
-
-  &:first-of-type {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 `

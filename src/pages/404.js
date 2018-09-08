@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 
-import '../styles/styles.scss';
-import styled, { css } from 'emotion';
+import '../styles/styles.scss'
+import styled, { css } from 'emotion'
 
-import Header from '../layouts/header';
-import Content from '../layouts/content';
-import Transition from '../components/transition';
+import Header from '../layouts/header'
+import Content from '../layouts/content'
+import Transition from '../components/transition'
 
 class NotFound extends React.Component {
   state = {
     width: null,
-    in: true
+    in: true,
   }
   componentDidMount() {
     this.setState({
-      width: this.container.offsetWidth
+      width: this.container.offsetWidth || window.innerWidth,
     })
   }
   componentWillUnmount() {
     this.setState({
-      in: false
+      in: false,
     })
   }
   render() {
@@ -27,7 +27,7 @@ class NotFound extends React.Component {
       <section>
         <Header headerWidth={this.state.width} />
         <Transition show={this.state.in}>
-          <div ref={node => this.container = node}>
+          <div ref={node => (this.container = node)}>
             <Content>
               <h2>Oops! Page Not Found.</h2>
             </Content>
@@ -37,4 +37,4 @@ class NotFound extends React.Component {
     )
   }
 }
-export default NotFound;
+export default NotFound
