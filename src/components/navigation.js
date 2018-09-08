@@ -9,6 +9,10 @@ const Navigation = ({ dots }) => (
     <li>
       <Link to="/about">About</Link>
     </li>
+    {dots ? <span className={dotShowOnTablet}>·</span> : ''}
+    <li className={hideOnDesktop}>
+      <Link to="/photos">Photos</Link>
+    </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
       <Link to="/resume">Resume</Link>
@@ -45,11 +49,16 @@ const navigation = css`
     color: var(--color-secondary);
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+
+    @media (min-width: 600px) {
+      font-size: 0.8rem;
+    }
   }
 
   & li {
     transition: all 0.35s ease;
+    user-select: none;
   }
 
   & li:hover {
@@ -57,7 +66,12 @@ const navigation = css`
     transform: translateY(-1px);
   }
 `
-
+const hideOnDesktop = css`
+  @media (min-width: 1200px) {
+    display: none;
+    visibility: hidden;
+  }
+`
 const dotShow = css`
   display: none;
 
@@ -65,5 +79,18 @@ const dotShow = css`
     display: inline;
     font-size: 1.5rem;
     color: var(--color-primary);
+  }
+`
+const dotShowOnTablet = css`
+  display: none;
+
+  @media (min-width: 430px) {
+    display: inline;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
   }
 `

@@ -18,6 +18,7 @@ const logo = css`
   font-style: normal;
   color: var(--color-secondary);
   transition: all 0.25s ease;
+  user-select: none;
 
   &:hover {
     color: var(--color-primary-hover);

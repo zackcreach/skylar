@@ -16,6 +16,7 @@ class About extends React.Component {
   componentDidMount() {
     this.handleResize()
     window.addEventListener('resize', this.handleResize)
+    window.scrollTo(0, 0)
   }
   handleResize = () => {
     this.setState({

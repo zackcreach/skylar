@@ -14,6 +14,7 @@ class Resume extends React.Component {
     in: true,
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.handleResize()
     window.addEventListener('resize', this.handleResize)
   }
@@ -64,7 +65,7 @@ class Resume extends React.Component {
 
               <h2 className={heading}>Film</h2>
               <div className={row}>
-                <p className={colLeft}>Godzilla: King of Monsters</p>
+                <p className={colLeft}>Godzilla: King of the Monsters</p>
                 <p className={colMid}>Featured</p>
                 <p className={colRight}>Legendary Ent./ Michael Dougherty</p>
               </div>

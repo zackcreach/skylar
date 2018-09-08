@@ -14,6 +14,7 @@ class Contact extends React.Component {
     in: true,
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.handleResize()
     window.addEventListener('resize', this.handleResize)
   }

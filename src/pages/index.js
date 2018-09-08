@@ -89,7 +89,7 @@ const navigation__container = css`
   }
 
   & a {
-    font-size: 1.1rem;
+    font-size: 1rem !important;
     font-weight: 300;
   }
 

@@ -9,9 +9,13 @@ const Content = ({ children }) => <div className={content}>{children}</div>
 export default Content
 
 const content = css`
-  padding: 150px 0 40px 0;
+  padding: 10px 0 40px 0;
 
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
+    padding: 140px 0 40px 0;
+  }
+
+  @media (min-width: 788px) {
     padding: 110px 0 40px 0;
   }
 `

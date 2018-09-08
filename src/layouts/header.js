@@ -21,7 +21,6 @@ const Header = ({ headerWidth }) => (
 export default Header
 
 const header = css`
-  position: fixed;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -30,6 +29,7 @@ const header = css`
   background: var(--color-tertiary);
 
   @media (min-width: 600px) {
+    position: fixed;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
@@ -38,21 +38,25 @@ const header = css`
 const logo__container = css`
   font-size: 2.5rem;
   line-height: 0.9;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 
   @media (min-width: 600px) {
     width: auto;
     font-size: 2.5rem;
     line-height: 0.9;
     padding-bottom: 0;
+    padding-right: 10px;
   }
 `
 const navigation__container = css`
-  font-size: 0.9rem;
-  width: 290px;
+  width: 300px;
 
   @media (min-width: 600px) {
-    font-size: 1.1rem;
     padding: 8px 0 0 0;
+    flex: 0 0 360px;
+  }
+
+  @media (min-width: 1200px) {
+    flex: 0 0 300px;
   }
 `
