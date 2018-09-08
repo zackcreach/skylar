@@ -3,10 +3,15 @@ module.exports = {
     title: `Skylar Denney`,
   },
   plugins: [
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        autoLabel: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
