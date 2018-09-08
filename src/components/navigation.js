@@ -19,7 +19,7 @@ const Navigation = ({ dots }) => (
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
-      <Link to="/demo">Demo</Link>
+      <Link to="/clips">Clips</Link>
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>

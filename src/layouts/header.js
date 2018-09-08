@@ -26,7 +26,7 @@ const header = css`
   flex-wrap: wrap;
   align-items: center;
   padding: 30px 0 30px 0;
-  background: var(--color-tertiary);
+  background-color: #f1ecec;
 
   @media (min-width: 600px) {
     position: fixed;

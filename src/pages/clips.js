@@ -8,7 +8,7 @@ import Header from '../layouts/header'
 import Content from '../layouts/content'
 import Transition from '../components/transition'
 
-class Demo extends React.Component {
+class Clips extends React.Component {
   state = {
     width: 400,
     in: true,
@@ -36,7 +36,7 @@ class Demo extends React.Component {
         <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
-              <h2>Demo</h2>
+              <h2>Clips</h2>
               <iframe
                 className={iframe}
                 src="https://www.youtube.com/embed/eF5fNyDVHaI"
@@ -60,7 +60,7 @@ class Demo extends React.Component {
   }
 }
 
-export default Demo
+export default Clips
 
 const iframe = css`
   width: 100%;
