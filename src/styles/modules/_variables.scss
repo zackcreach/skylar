@@ -1,7 +1,9 @@
 :root {
   // Colors
-  --turq: rgb(147,213,213);
-  --turqHover: rgb(134, 199, 199);
+  --colorPrimary: #c6b1b3;
+  --colorSecondary: #2d2123;
+  --colorTertiary: lighten(#e6ddde, 5%);
+  --colorPrimaryHover: darken(#c6b1b3, 5%);
 
   // Values
   --skewW: 80px; 

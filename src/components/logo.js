@@ -16,11 +16,11 @@ export default Logo;
 const logo = css`
   font-family: 'Lobster', Georgia, serif;
   font-style: normal;
-  color: var(--turq);
+  color: var(--colorPrimary);
   transition: all .25s ease;
 
   &:hover {
-    color: var(--turqHover);
+    color: var(--colorPrimaryHover);
     transform: translateY(-1px);
   }
 `

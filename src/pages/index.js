@@ -46,24 +46,35 @@ const index = css`
   align-items: center;
   flex-direction: column;
   height: 100%;
+  min-height: 600px;
+  padding-bottom: 60px;
   
   @media (min-width: 430px) {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding-bottom: 0;
   }
 `
 const logo__container = css`
   margin: 50px 0 50px 0;
   display: flex;
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: .9;
   text-align: center;
   text-shadow: 3px 3px 0px rgba(200, 200, 200,.25);
 
   @media (min-width: 430px) {
+    padding: 0 20px;
+    font-size: calc(100vw / 6.5);
+  }
+  
+  @media (min-width: 740px) {
     padding: 0;
-    font-size: 7rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 8rem;
   }
 `
 const navigation__container = css`

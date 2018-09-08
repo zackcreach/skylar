@@ -47,7 +47,7 @@ const navigation = css`
   }
 
   & * {
-    color: var(--turq);
+    color: var(--colorPrimary);
   }
 
   & li {
@@ -55,7 +55,7 @@ const navigation = css`
   }
 
   & li:hover {
-    color: var(--turqHover);
+    color: var(--colorPrimaryHover);
     transform: translateY(-1px);
   }
 `

@@ -220,7 +220,7 @@ const row = css`
 	}
 	
 	&:nth-child(2n + 1) {
-		background: rgba(0, 0, 0, .033);
+		background-color: var(--colorTertiary);
 	}
 `
 
