@@ -14,13 +14,13 @@ const Logo = () => (
 export default Logo;
 
 const logo = css`
-  font-family: 'Lobster', Georgia, serif;
+  font-family: var(--font-secondary);
   font-style: normal;
-  color: var(--colorPrimary);
+  color: var(--color-secondary);
   transition: all .25s ease;
 
   &:hover {
-    color: var(--colorPrimaryHover);
+    color: var(--color-primary-hover);
     transform: translateY(-1px);
   }
 `

@@ -66,7 +66,7 @@ const Slide = ({ ...props, children }) => (
 const viewer = css`
   height: 100%;
   width: 100%;
-  background: var(--colorPrimary);
+  background: var(--color-primary);
   overflow: hidden;
 `
 const imageStyle = css`

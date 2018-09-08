@@ -1,69 +1,69 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
-import '../styles/styles.scss';
-import styled, { css } from 'emotion';
+import '../styles/styles.scss'
+import styled, { css } from 'emotion'
 
 const Navigation = ({ dots }) => (
   <ul className={navigation}>
     <li>
-      <Link to="/about">
-        About
-      </Link>
+      <Link to="/about">About</Link>
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
-      <Link to="/resume">
-        Resume
-      </Link>
+      <Link to="/resume">Resume</Link>
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
-      <Link to="/demo">
-        Demo
-      </Link>
+      <Link to="/demo">Demo</Link>
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
-      <Link to="/contact">
-        Contact
-      </Link>
+      <a href="https://lifelesswasteful.com">Blog</a>
+    </li>
+    {dots ? <span className={dotShow}>·</span> : ''}
+    <li>
+      <Link to="/contact">Contact</Link>
     </li>
   </ul>
 )
 
-export default Navigation;
+export default Navigation
 
 const navigation = css`
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: 220px;
-  
+
   @media (min-width: 430px) {
     justify-content: space-between;
     width: auto;
   }
 
-  & * {
-    color: var(--colorPrimary);
+  & a {
+    color: var(--color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 
   & li {
-    transition: all .35s ease;
+    transition: all 0.35s ease;
   }
 
   & li:hover {
-    color: var(--colorPrimaryHover);
+    color: var(--color-primary-hover);
     transform: translateY(-1px);
   }
 `
 
 const dotShow = css`
   display: none;
-  
+
   @media (min-width: 430px) {
     display: inline;
+    font-size: 1.5rem;
+    color: var(--color-primary);
   }
 `

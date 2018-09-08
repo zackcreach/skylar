@@ -21,7 +21,7 @@ class IndexLayout extends React.Component {
             <meta name='description' content='The Portfolio of Skylar Denney'/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="shortcut icon" href={ico} type="image/x-icon"/>
-            <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,300i,400,400i,600,600i" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400|Lato:300,400" rel="stylesheet" />
           </Helmet>
           <TransitionGroup className={left}>
             {this.props.children()}
@@ -74,7 +74,7 @@ const flex = css`
 const outer = css`
   ${flex};
   flex-direction: column;
-  background: var(--colorPrimary);
+  background: var(--color-primary);
   height: 100vh;
 `
 const inner = css`
@@ -87,7 +87,7 @@ const inner = css`
     @media (min-width: 430px) {
       width: 90%;
       margin: 30px 0 30px 0;
-      box-shadow: 6px 6px 40px rgba(100, 100, 100, .5);
+      box-shadow: 20px 20px 80px rgba(255, 255, 255, .2);
     }
     
     @media (min-width: 1200px) {
@@ -100,7 +100,7 @@ const inner = css`
     `
 const left = css`
   overflow: scroll;
-  background: white;
+  background: var(--color-tertiary);
   padding: 0 25px 0 25px;
   width: 100%;
   

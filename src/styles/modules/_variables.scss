@@ -1,10 +1,14 @@
 :root {
   // Colors
-  --colorPrimary: #c6b1b3;
-  --colorSecondary: #2d2123;
-  --colorTertiary: lighten(#e6ddde, 5%);
-  --colorPrimaryHover: darken(#c6b1b3, 5%);
+  --color-primary: #c6b1b3;
+  --color-secondary: #5f464a;
+  --color-tertiary: lighten(#e6ddde, 5%);
+  --color-primary-hover: darken(#5f464a, 5%);
 
+  // Fonts
+  --font-primary: 'Lato', Arial, Helvetica, sans-serif;
+  --font-secondary: 'Playfair Display', Georgia, Times New Roman, serif;
+  
   // Values
   --skewW: 80px; 
 }

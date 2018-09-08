@@ -46,10 +46,11 @@ const index = css`
   align-items: center;
   flex-direction: column;
   height: 100%;
-  min-height: 600px;
+  min-height: 700px;
   padding-bottom: 60px;
   
   @media (min-width: 430px) {
+    min-height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -59,10 +60,9 @@ const index = css`
 const logo__container = css`
   margin: 50px 0 50px 0;
   display: flex;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: .9;
   text-align: center;
-  text-shadow: 3px 3px 0px var(--colorTertiary);
 
   @media (min-width: 430px) {
     padding: 0 20px;
@@ -74,16 +74,22 @@ const logo__container = css`
   }
 
   @media (min-width: 1200px) {
-    font-size: 8rem;
+    font-size: 6.75rem;
+    letter-spacing: -1px;
   }
 `
 const navigation__container = css`
   font-size: 1.5rem;
-  height: 50%;
+  height: 40%;
   
   & > ul {
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  & a {
+    font-size: 1.1rem;
+    font-weight: 400;
   }
   
   @media (min-width: 430px) {

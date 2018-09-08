@@ -66,7 +66,7 @@ const contactBox = css`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 2px solid var(--colorPrimary);
+  border: 2px solid var(--color-primary);
   padding: 30px 30px 50px 30px;
   margin: 15px 0 0 0;
   width: 100%;
