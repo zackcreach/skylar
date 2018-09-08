@@ -1,20 +1,20 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
-import '../styles/styles.scss';
-import styled, { css } from 'emotion';
+import '../styles/styles.scss'
+import styled, { css } from 'emotion'
 
-import Logo from '../components/logo';
-import Navigation from '../components/navigation';
-import Transition from '../components/transition';
+import Logo from '../components/logo'
+import Navigation from '../components/navigation'
+import Transition from '../components/transition'
 
 class IndexPage extends React.Component {
   state = {
-    in: true
+    in: true,
   }
   componentWillUnmount() {
     this.setState({
-      in: false
+      in: false,
     })
   }
   render() {
@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage;
+export default IndexPage
 
 const flex = css`
   display: flex;
@@ -48,7 +48,7 @@ const index = css`
   height: 100%;
   min-height: 700px;
   padding-bottom: 60px;
-  
+
   @media (min-width: 430px) {
     min-height: auto;
     justify-content: center;
@@ -61,14 +61,14 @@ const logo__container = css`
   margin: 50px 0 50px 0;
   display: flex;
   font-size: 4rem;
-  line-height: .9;
+  line-height: 0.9;
   text-align: center;
 
   @media (min-width: 430px) {
     padding: 0 20px;
     font-size: calc(100vw / 6.5);
   }
-  
+
   @media (min-width: 740px) {
     padding: 0;
   }
@@ -76,12 +76,13 @@ const logo__container = css`
   @media (min-width: 1200px) {
     font-size: 6.75rem;
     letter-spacing: -1px;
+    padding-bottom: 10px;
   }
 `
 const navigation__container = css`
   font-size: 1.5rem;
   height: 40%;
-  
+
   & > ul {
     flex-direction: column;
     justify-content: space-around;
@@ -89,12 +90,12 @@ const navigation__container = css`
 
   & a {
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 300;
   }
-  
+
   @media (min-width: 430px) {
     padding: 0;
     width: 350px;
-    height: 300px;    
+    height: 300px;
   }
 `

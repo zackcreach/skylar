@@ -249,6 +249,11 @@ const row = css`
 const rowAstrisk = css`
   display: flex;
   justify-content: flex-end;
+  font-size: 0.8rem;
+
+  @media (min-width: 430px) {
+    font-size: 1rem;
+  }
 `
 
 const col = css`

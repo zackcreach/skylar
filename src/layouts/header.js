@@ -27,7 +27,7 @@ const header = css`
   flex-wrap: wrap;
   align-items: center;
   padding: 30px 0 30px 0;
-  background: linear-gradient(var(--color-tertiary) 98%, transparent);
+  background: var(--color-tertiary);
 
   @media (min-width: 600px) {
     flex-wrap: nowrap;
