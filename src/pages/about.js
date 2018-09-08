@@ -35,7 +35,8 @@ class About extends React.Component {
         <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
-              <h2>Actor. Writer. Yogi. Cat video enthusiast.</h2>
+              <h2>Actor. Writer. Cat video enthusiast.</h2>
+
               <p>Hey there and welcome to my website!</p>
               <p>
                 I’m an actor local to Atlanta auditioning all over the
@@ -46,23 +47,22 @@ class About extends React.Component {
                 other schools around town.
               </p>
               <p>
-                If you’d like to see what I do, I perform regularly on a House
-                Team at Highwire Comedy, Co. here in Atlanta as well as on other
-                teams like The Actor’s Worst Nightmare!
+                If you’d like to see what I do, I perform on an improv team
+                called Big Poppa on Thursday nights at Village Theater as well
+                as on other teams like The Actor’s Worst Nightmare at Highwire
+                Comedy!
               </p>
               <p>
-                Along with acting, I get together with a group of super savvy
-                girls to collaborate on writing projects like sketches and
-                screenplays each week.
+                Along with acting, I write a{' '}
+                <a href="//lifelesswasteful.com">
+                  blog called Life Less Wasteful
+                </a>{' '}
+                about my journey to live with less trash, ‘cause we all could be
+                a little kinder to the planet, y’know?
               </p>
               <p>
-                I also am an avid yogi that loves rock climbing and, as stated
-                above…cat videos. Seriously. If you need a good laugh, I can
-                hook you up.
-              </p>
-              <p>
-                So peruse my site, feel free to get in contact with me if you
-                have any questions, and have an awesome day!
+                So peruse my site, check out my blog and feel free to get in
+                contact with me if you have any questions. Have an awesome day!
               </p>
             </Content>
           </div>

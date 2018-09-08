@@ -89,7 +89,7 @@ const inner = css`
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: var(--color-tertiary);
+  background-color: #f1ecec;
   -webkit-overflow-scrolling: touch;
 
   @media (min-width: 430px) {
@@ -108,7 +108,7 @@ const inner = css`
 `
 const left = css`
   overflow: scroll;
-  background-color: var(--color-tertiary);
+  background-color: #f1ecec;
   padding: 0 25px 0 25px;
   width: 100%;
 

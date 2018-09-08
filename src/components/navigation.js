@@ -19,7 +19,7 @@ const Navigation = ({ dots }) => (
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
-      <a href="https://lifelesswasteful.com">Blog</a>
+      <a href="//lifelesswasteful.com">Blog</a>
     </li>
     {dots ? <span className={dotShow}>·</span> : ''}
     <li>
