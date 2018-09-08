@@ -32,7 +32,6 @@ class Photos extends React.Component {
     const { data } = this.props
     const assetNumber = data.allImageSharp.edges.length
     const assetHalf = assetNumber / 2
-    console.log(assetNumber, assetHalf)
     return (
       <section>
         <Header headerWidth={this.state.width} />
@@ -78,7 +77,10 @@ export default Photos
 
 export const query = graphql`
   query PhotosPageQuery {
-    allImageSharp(filter: { id: { regex: "/Web|FNL/" } }) {
+    allImageSharp(
+      filter: { id: { regex: "/viewer|photos/" } }
+      sort: { fields: [id], order: ASC }
+    ) {
       edges {
         node {
           sizes(maxWidth: 600) {

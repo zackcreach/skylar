@@ -10,12 +10,15 @@ import styled, { css } from 'emotion';
 
 class Viewer extends React.PureComponent {
   constructor({ imageData }) {
-    super();
+    super({ imageData });
     this.state = {
-      gallery: Object.values(imageData),
+      gallery: imageData.allImageSharp.edges,
       currentImageIndex: 0,
       show: true
     }
+  }
+  componentDidMount() {
+    console.log(this.state.gallery);
   }
   componentWillMount() {
     setInterval(() => this.changeImage(), 7500);
@@ -28,7 +31,7 @@ class Viewer extends React.PureComponent {
   renderImage() {
     const { gallery, currentImageIndex, show } = this.state;
     return (
-      <Img sizes={gallery[currentImageIndex].sizes} key={Date.now()} className={imageStyle} />
+      <Img sizes={gallery[currentImageIndex].node.sizes} key={Date.now()} className={imageStyle} />
     )
   }
   render() {
