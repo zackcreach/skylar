@@ -13,7 +13,7 @@ const Header = ({ headerWidth }) => (
       <Logo />
     </div>
     <div className={navigation__container}>
-      <Navigation dots/>
+      <Navigation />
     </div>
   </div>
 )
@@ -26,11 +26,7 @@ const header = css`
   justify-content: space-between;  
   align-items: center;
   padding: 30px 0 30px 0;
-  background: white;
-  
-  @media (min-width: 430px) {
-
-  }
+  background: linear-gradient(white 98%, transparent);
 `
 const logo__container = css`
   font-size: 1.8rem;
@@ -38,18 +34,19 @@ const logo__container = css`
   width: 30%;
   /* text-shadow: 2px 2px 0px rgba(200, 200, 200,.4); */
 
-  @media (min-width: 430px) {
+  @media (min-width: 600px) {
     width: auto;
-    font-size: 3rem;
+    font-size: 2.3rem;
     line-height: .9;
   }
 `
 const navigation__container = css`
   font-size: .9rem;
+  min-width: 220px;
   
-  @media (min-width: 430px) {
-    font-size: 1.2rem;
-    width: 300px;
-    padding: 15px 0 0 0;
+  @media (min-width: 600px) {
+    font-size: 1.1rem;
+    width: 290px;
+    padding: 10px 0 0 0;
   }
 `

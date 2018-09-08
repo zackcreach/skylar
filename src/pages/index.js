@@ -62,7 +62,7 @@ const logo__container = css`
   font-size: 5rem;
   line-height: .9;
   text-align: center;
-  text-shadow: 3px 3px 0px rgba(200, 200, 200,.25);
+  text-shadow: 3px 3px 0px var(--colorTertiary);
 
   @media (min-width: 430px) {
     padding: 0 20px;
