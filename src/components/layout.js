@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { TransitionGroup } from 'react-transition-group'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../styles/styles.scss'
@@ -10,7 +9,8 @@ import { css } from 'emotion'
 import ico from '../images/favicon.png'
 import Viewer from './viewer'
 
-class Layout extends React.Component {
+class Layout extends React.PureComponent {
+  changeImage = index => this.setState({ currentImageIndex: index })
   render() {
     return (
       <StaticQuery
@@ -51,12 +51,10 @@ class Layout extends React.Component {
                   rel="stylesheet"
                 />
               </Helmet>
-              <TransitionGroup className={left}>
-                {this.props.children}
-              </TransitionGroup>
-              <section className={right}>
+              <section className={left}>{this.props.children}</section>
+              <aside className={right}>
                 <Viewer imageData={data} />
-              </section>
+              </aside>
             </div>
           </div>
         )}

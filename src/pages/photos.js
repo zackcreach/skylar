@@ -7,12 +7,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Content from '../components/content'
-import Transition from '../components/transition'
 
-class Photos extends React.Component {
+class Photos extends React.PureComponent {
   state = {
     width: 400,
-    in: true,
   }
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -55,43 +53,41 @@ class Photos extends React.Component {
           <Layout>
             <section>
               <Header headerWidth={this.state.width} />
-              <Transition show={this.state.in}>
-                <div ref={node => (this.container = node)}>
-                  <Content>
-                    <h2>Photos</h2>
-                    <div className={container}>
-                      <div className={column}>
-                        {data.allImageSharp.edges.map(({ node }, index) => {
-                          if (index + 1 <= data.allImageSharp.edges.length / 2)
-                            return (
-                              <img
-                                key={index}
-                                className={image}
-                                src={node.fluid.src}
-                                alt={`${index + 1} of Skylar`}
-                              />
-                            )
-                          else return null
-                        })}
-                      </div>
-                      <div className={column}>
-                        {data.allImageSharp.edges.map(({ node }, index) => {
-                          if (index + 1 > data.allImageSharp.edges.length / 2)
-                            return (
-                              <img
-                                key={index}
-                                className={image}
-                                src={node.fluid.src}
-                                alt={`${index + 1} of Skylar`}
-                              />
-                            )
-                          else return null
-                        })}
-                      </div>
+              <div ref={node => (this.container = node)}>
+                <Content>
+                  <h2>Photos</h2>
+                  <div className={container}>
+                    <div className={column}>
+                      {data.allImageSharp.edges.map(({ node }, index) => {
+                        if (index + 1 <= data.allImageSharp.edges.length / 2)
+                          return (
+                            <img
+                              key={index}
+                              className={image}
+                              src={node.fluid.src}
+                              alt={`${index + 1} of Skylar`}
+                            />
+                          )
+                        else return null
+                      })}
                     </div>
-                  </Content>
-                </div>
-              </Transition>
+                    <div className={column}>
+                      {data.allImageSharp.edges.map(({ node }, index) => {
+                        if (index + 1 > data.allImageSharp.edges.length / 2)
+                          return (
+                            <img
+                              key={index}
+                              className={image}
+                              src={node.fluid.src}
+                              alt={`${index + 1} of Skylar`}
+                            />
+                          )
+                        else return null
+                      })}
+                    </div>
+                  </div>
+                </Content>
+              </div>
             </section>
           </Layout>
         )}

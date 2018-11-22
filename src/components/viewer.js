@@ -37,7 +37,9 @@ class Viewer extends React.PureComponent {
     const { gallery, currentImageIndex, show } = this.state
     return (
       <div className={viewer}>
-        <Slide
+        <CSSTransition
+          timeout={800}
+          classNames="slide"
           in={show}
           onExited={() =>
             this.setState({
@@ -50,19 +52,13 @@ class Viewer extends React.PureComponent {
           }
         >
           {this.renderImage()}
-        </Slide>
+        </CSSTransition>
       </div>
     )
   }
 }
 
 export default Viewer
-
-const Slide = ({ children, ...props }) => (
-  <CSSTransition {...props} timeout={800} classNames="slide">
-    {children}
-  </CSSTransition>
-)
 
 const viewer = css`
   height: 100%;

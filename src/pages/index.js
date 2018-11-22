@@ -6,30 +6,19 @@ import { css } from 'emotion'
 import Layout from '../components/layout'
 import Logo from '../components/logo'
 import Navigation from '../components/navigation'
-import Transition from '../components/transition'
 
-class IndexPage extends React.Component {
-  state = {
-    in: true,
-  }
-  componentWillUnmount() {
-    this.setState({
-      in: false,
-    })
-  }
+class IndexPage extends React.PureComponent {
   render() {
     return (
       <Layout>
-        <Transition show={this.state.in}>
-          <div className={index}>
-            <div className={logo__container}>
-              <Logo />
-            </div>
-            <div className={navigation__container}>
-              <Navigation dots />
-            </div>
+        <div className={index}>
+          <div className={logo__container}>
+            <Logo />
           </div>
-        </Transition>
+          <div className={navigation__container}>
+            <Navigation dots />
+          </div>
+        </div>
       </Layout>
     )
   }
