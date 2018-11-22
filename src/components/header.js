@@ -1,11 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
 import styled, { css } from 'emotion'
 
-import Logo from '../components/logo'
-import Navigation from '../components/navigation'
+import Logo from './logo'
+import Navigation from './navigation'
 
 const Header = ({ headerWidth }) => (
   <div className={header} style={{ width: headerWidth }}>

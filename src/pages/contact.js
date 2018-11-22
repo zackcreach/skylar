@@ -1,11 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
 import styled, { css } from 'emotion'
 
-import Header from '../layouts/header'
-import Content from '../layouts/content'
+import Layout from '../components/layout'
+import Header from '../components/header'
+import Content from '../components/content'
 import Transition from '../components/transition'
 
 class Contact extends React.Component {
@@ -31,37 +32,39 @@ class Contact extends React.Component {
   }
   render() {
     return (
-      <section>
-        <Header headerWidth={this.state.width} />
-        <Transition show={this.state.in}>
-          <div ref={node => (this.container = node)}>
-            <Content>
-              <h2>Contact</h2>
-              <div className={contactContainer}>
-                <div className={contactBox}>
-                  <h2>Bookings</h2>
-                  <p>
-                    <a href="http://www.soltalent.com/" target="_blank">
-                      Sol Talent
-                    </a>
-                  </p>
-                  <p>
-                    <a href="mailto:info@soltalent.com">Email</a>
-                  </p>
-                  843-882-7560
+      <Layout>
+        <section>
+          <Header headerWidth={this.state.width} />
+          <Transition show={this.state.in}>
+            <div ref={node => (this.container = node)}>
+              <Content>
+                <h2>Contact</h2>
+                <div className={contactContainer}>
+                  <div className={contactBox}>
+                    <h2>Bookings</h2>
+                    <p>
+                      <a href="http://www.soltalent.com/" target="_blank">
+                        Sol Talent
+                      </a>
+                    </p>
+                    <p>
+                      <a href="mailto:info@soltalent.com">Email</a>
+                    </p>
+                    843-882-7560
+                  </div>
+                  <div className={contactBox}>
+                    <h2>Direct</h2>
+                    <p>
+                      <a href="mailto:skylardenney1@gmail.com">Email</a>
+                    </p>
+                    <p>304-906-8780</p>
+                  </div>
                 </div>
-                <div className={contactBox}>
-                  <h2>Direct</h2>
-                  <p>
-                    <a href="mailto:skylardenney1@gmail.com">Email</a>
-                  </p>
-                  <p>304-906-8780</p>
-                </div>
-              </div>
-            </Content>
-          </div>
-        </Transition>
-      </section>
+              </Content>
+            </div>
+          </Transition>
+        </section>
+      </Layout>
     )
   }
 }

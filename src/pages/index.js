@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
+import Layout from '../components/layout'
 import Logo from '../components/logo'
 import Navigation from '../components/navigation'
 import Transition from '../components/transition'
@@ -19,27 +19,24 @@ class IndexPage extends React.Component {
   }
   render() {
     return (
-      <Transition show={this.state.in}>
-        <div className={index}>
-          <div className={logo__container}>
-            <Logo />
+      <Layout>
+        <Transition show={this.state.in}>
+          <div className={index}>
+            <div className={logo__container}>
+              <Logo />
+            </div>
+            <div className={navigation__container}>
+              <Navigation dots />
+            </div>
           </div>
-          <div className={navigation__container}>
-            <Navigation dots />
-          </div>
-        </div>
-      </Transition>
+        </Transition>
+      </Layout>
     )
   }
 }
 
 export default IndexPage
 
-const flex = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const index = css`
   display: flex;
   justify-content: flex-start;

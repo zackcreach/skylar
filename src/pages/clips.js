@@ -1,11 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
 import styled, { css } from 'emotion'
 
-import Header from '../layouts/header'
-import Content from '../layouts/content'
+import Layout from '../components/layout'
+import Header from '../components/header'
+import Content from '../components/content'
 import Transition from '../components/transition'
 
 class Clips extends React.Component {
@@ -31,31 +32,33 @@ class Clips extends React.Component {
   }
   render() {
     return (
-      <section>
-        <Header headerWidth={this.state.width} />
-        <Transition show={this.state.in}>
-          <div ref={node => (this.container = node)}>
-            <Content>
-              <h2>Clips</h2>
-              <iframe
-                className={iframe}
-                src="https://www.youtube.com/embed/eF5fNyDVHaI"
-                allowFullScreen
-              />
-              <iframe
-                className={iframe}
-                src="https://www.youtube.com/embed/EUxu71yZB08"
-                allowFullScreen
-              />
-              <iframe
-                className={iframe}
-                src="https://www.youtube.com/embed/M8oGZ42Tw-Q"
-                allowFullScreen
-              />
-            </Content>
-          </div>
-        </Transition>
-      </section>
+      <Layout>
+        <section>
+          <Header headerWidth={this.state.width} />
+          <Transition show={this.state.in}>
+            <div ref={node => (this.container = node)}>
+              <Content>
+                <h2>Clips</h2>
+                <iframe
+                  className={iframe}
+                  src="https://www.youtube.com/embed/eF5fNyDVHaI"
+                  allowFullScreen
+                />
+                <iframe
+                  className={iframe}
+                  src="https://www.youtube.com/embed/EUxu71yZB08"
+                  allowFullScreen
+                />
+                <iframe
+                  className={iframe}
+                  src="https://www.youtube.com/embed/M8oGZ42Tw-Q"
+                  allowFullScreen
+                />
+              </Content>
+            </div>
+          </Transition>
+        </section>
+      </Layout>
     )
   }
 }
