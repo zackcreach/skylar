@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -42,16 +41,19 @@ class Clips extends React.Component {
                 <iframe
                   className={iframe}
                   src="https://www.youtube.com/embed/eF5fNyDVHaI"
+                  title="Clip 1"
                   allowFullScreen
                 />
                 <iframe
                   className={iframe}
                   src="https://www.youtube.com/embed/EUxu71yZB08"
+                  title="Clip 2"
                   allowFullScreen
                 />
                 <iframe
                   className={iframe}
                   src="https://www.youtube.com/embed/M8oGZ42Tw-Q"
+                  title="Clip 3"
                   allowFullScreen
                 />
               </Content>

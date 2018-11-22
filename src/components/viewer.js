@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-// import { next, back } from '../helpers/carousel';
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 class Viewer extends React.PureComponent {
   constructor({ imageData }) {
@@ -17,8 +15,7 @@ class Viewer extends React.PureComponent {
       show: true,
     }
   }
-  componentDidMount() {}
-  componentWillMount() {
+  componentDidMount() {
     setInterval(() => this.changeImage(), 7500)
   }
   changeImage() {
@@ -27,7 +24,7 @@ class Viewer extends React.PureComponent {
     })
   }
   renderImage() {
-    const { gallery, currentImageIndex, show } = this.state
+    const { gallery, currentImageIndex } = this.state
     return (
       <Img
         fluid={gallery[currentImageIndex].node.fluid}

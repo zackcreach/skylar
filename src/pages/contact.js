@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -43,7 +42,11 @@ class Contact extends React.Component {
                   <div className={contactBox}>
                     <h2>Bookings</h2>
                     <p>
-                      <a href="http://www.soltalent.com/" target="_blank">
+                      <a
+                        href="http://www.soltalent.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Sol Talent
                       </a>
                     </p>

@@ -1,12 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { TransitionGroup } from 'react-transition-group'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 import ico from '../images/favicon.png'
 import Viewer from './viewer'

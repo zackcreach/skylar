@@ -68,8 +68,10 @@ class Photos extends React.Component {
                                 key={index}
                                 className={image}
                                 src={node.fluid.src}
+                                alt={`${index + 1} of Skylar`}
                               />
                             )
+                          else return null
                         })}
                       </div>
                       <div className={column}>
@@ -80,8 +82,10 @@ class Photos extends React.Component {
                                 key={index}
                                 className={image}
                                 src={node.fluid.src}
+                                alt={`${index + 1} of Skylar`}
                               />
                             )
+                          else return null
                         })}
                       </div>
                     </div>

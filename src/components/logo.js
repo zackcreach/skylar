@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Navigation from '../components/navigation'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 const Logo = () => (
   <Link to="/">

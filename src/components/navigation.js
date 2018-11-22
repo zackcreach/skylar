@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
-import styled, { css } from 'emotion'
+import { css } from 'emotion'
 
 const Navigation = ({ dots }) => (
   <ul className={navigation}>
