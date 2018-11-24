@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+// import { TransitionGroup } from 'react-transition-group'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../styles/styles.scss'
@@ -51,7 +52,10 @@ class Layout extends React.PureComponent {
                   rel="stylesheet"
                 />
               </Helmet>
-              <section className={left}>{this.props.children}</section>
+              {/* <TransitionGroup className={left}>
+                {this.props.children}
+              </TransitionGroup> */}
+              <div className={left}>{this.props.children}</div>
               <aside className={right}>
                 <Viewer imageData={data} />
               </aside>

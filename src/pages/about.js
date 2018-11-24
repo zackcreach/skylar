@@ -2,13 +2,14 @@ import React from 'react'
 
 import '../styles/styles.scss'
 
-import Layout from '../components/layout'
 import Header from '../components/header'
 import Content from '../components/content'
+import Transition from '../components/transition'
 
 class About extends React.PureComponent {
   state = {
     width: 400,
+    in: true,
   }
   componentDidMount() {
     this.handleResize()
@@ -21,16 +22,13 @@ class About extends React.PureComponent {
     })
   }
   componentWillUnmount() {
-    this.setState({
-      in: false,
-    })
     window.removeEventListener('resize', this.handleResize)
   }
   render() {
     return (
-      <Layout>
-        <section>
-          <Header headerWidth={this.state.width} />
+      <section>
+        <Header headerWidth={this.state.width} />
+        <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
               <h2>Actor. Writer. Cat video enthusiast.</h2>
@@ -64,8 +62,8 @@ class About extends React.PureComponent {
               </p>
             </Content>
           </div>
-        </section>
-      </Layout>
+        </Transition>
+      </section>
     )
   }
 }

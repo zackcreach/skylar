@@ -3,23 +3,20 @@ import React from 'react'
 import '../styles/styles.scss'
 import { css } from 'emotion'
 
-import Layout from '../components/layout'
 import Logo from '../components/logo'
 import Navigation from '../components/navigation'
 
 class IndexPage extends React.PureComponent {
   render() {
     return (
-      <Layout>
-        <div className={index}>
-          <div className={logo__container}>
-            <Logo />
-          </div>
-          <div className={navigation__container}>
-            <Navigation dots />
-          </div>
+      <div className={index}>
+        <div className={logo__container}>
+          <Logo />
         </div>
-      </Layout>
+        <div className={navigation__container}>
+          <Navigation dots />
+        </div>
+      </div>
     )
   }
 }

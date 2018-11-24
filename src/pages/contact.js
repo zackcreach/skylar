@@ -3,13 +3,14 @@ import React from 'react'
 import '../styles/styles.scss'
 import { css } from 'emotion'
 
-import Layout from '../components/layout'
 import Header from '../components/header'
 import Content from '../components/content'
+import Transition from '../components/transition'
 
 class Contact extends React.PureComponent {
   state = {
     width: 400,
+    in: true,
   }
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -26,9 +27,9 @@ class Contact extends React.PureComponent {
   }
   render() {
     return (
-      <Layout>
-        <section>
-          <Header headerWidth={this.state.width} />
+      <section>
+        <Header headerWidth={this.state.width} />
+        <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
               <h2>Contact</h2>
@@ -59,8 +60,8 @@ class Contact extends React.PureComponent {
               </div>
             </Content>
           </div>
-        </section>
-      </Layout>
+        </Transition>
+      </section>
     )
   }
 }

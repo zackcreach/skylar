@@ -3,13 +3,14 @@ import React from 'react'
 import '../styles/styles.scss'
 import { css } from 'emotion'
 
-import Layout from '../components/layout'
 import Header from '../components/header'
 import Content from '../components/content'
+import Transition from '../components/transition'
 
-class Resume extends React.PureComponent {
+class Resume extends React.Component {
   state = {
     width: 400,
+    in: true,
   }
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -22,16 +23,13 @@ class Resume extends React.PureComponent {
     })
   }
   componentWillUnmount() {
-    this.setState({
-      in: false,
-    })
     window.removeEventListener('resize', this.handleResize)
   }
   render() {
     return (
-      <Layout>
-        <section>
-          <Header headerWidth={this.state.width} />
+      <section>
+        <Header headerWidth={this.state.width} />
+        <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
               <h2>Resume</h2>
@@ -225,8 +223,8 @@ class Resume extends React.PureComponent {
               </div>
             </Content>
           </div>
-        </section>
-      </Layout>
+        </Transition>
+      </section>
     )
   }
 }
