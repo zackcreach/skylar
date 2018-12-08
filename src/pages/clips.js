@@ -12,19 +12,23 @@ class Clips extends React.PureComponent {
     width: 400,
     in: true,
   }
+
   componentDidMount() {
     window.scrollTo(0, 0)
     this.handleResize()
     window.addEventListener('resize', this.handleResize)
   }
+
   handleResize = () => {
     this.setState({
       width: this.container.offsetWidth || window.innerWidth,
     })
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
   }
+
   render() {
     return (
       <section>
@@ -49,6 +53,12 @@ class Clips extends React.PureComponent {
                 className={iframe}
                 src="https://www.youtube.com/embed/EUxu71yZB08"
                 title="Clip 3"
+                allowFullScreen
+              />
+              <iframe
+                className={iframe}
+                src="https://www.youtube.com/embed/mz6GsoAb49w"
+                title="Clip 4"
                 allowFullScreen
               />
               <iframe

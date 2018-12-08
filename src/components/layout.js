@@ -12,6 +12,7 @@ import Viewer from './viewer'
 
 class Layout extends React.PureComponent {
   changeImage = index => this.setState({ currentImageIndex: index })
+
   render() {
     return (
       <StaticQuery
