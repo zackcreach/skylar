@@ -79,6 +79,6 @@ const navigation__container = css`
   @media (min-width: 430px) {
     padding: 0;
     width: 350px;
-    height: 300px;
+    height: 240px;
   }
 `

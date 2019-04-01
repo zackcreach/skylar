@@ -84,24 +84,23 @@ const outer = css`
   flex-direction: column;
   background: var(--color-primary);
   height: 100vh;
+
+  @media (min-width: 1200px) {
+    height: 100vh;
+  }
 `
 const inner = css`
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: #f1ecec;
   -webkit-overflow-scrolling: touch;
 
-  @media (min-width: 430px) {
-    width: 90%;
-    margin: 30px 0 30px 0;
-    box-shadow: 20px 20px 80px rgba(255, 255, 255, 0.2);
-  }
-
   @media (min-width: 1200px) {
+    box-shadow: 20px 20px 80px rgba(255, 255, 255, 0.2);
     display: flex;
+    margin: 30px 0 30px 0;
     margin: 0;
     height: 100%;
     width: 1200px;
@@ -131,8 +130,9 @@ const right = css`
 
   @media (min-width: 1200px) {
     display: block;
+    overflow: hidden;
     order: 0;
     width: 40%;
-    height: auto;
+    height: 100%;
   }
 `

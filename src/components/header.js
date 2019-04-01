@@ -56,6 +56,6 @@ const navigation__container = css`
   }
 
   @media (min-width: 1200px) {
-    flex: 0 0 300px;
+    flex: 0 0 260px;
   }
 `

@@ -32,7 +32,7 @@ class Photos extends React.PureComponent {
         query={graphql`
           {
             allImageSharp(
-              filter: { fluid: { originalName: { regex: "/viewer|photos/" } } }
+              filter: { fluid: { originalName: { regex: "/viewer/" } } }
               sort: { fields: [fluid___originalName], order: ASC }
             ) {
               edges {
@@ -100,6 +100,7 @@ const container = css`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  -webkit-overflow-scrolling: auto;
 
   @media (min-width: 600px) {
     flex-wrap: nowrap;
@@ -110,7 +111,7 @@ const column = css`
   flex-direction: column;
   width: 100%;
 
-  @media (min-width: 650px) {
+  @media (min-width: 600px) {
     width: 50%;
 
     &:nth-of-type(1) {
