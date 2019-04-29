@@ -4,27 +4,29 @@ import { Link } from 'gatsby'
 import '../styles/styles.scss'
 import { css } from 'emotion'
 
+const links = [
+  { title: 'About', link: '/about' },
+  { title: 'Photos', link: '/photos' },
+  { title: 'Resume', link: '/resume' },
+  { title: 'Clips', link: '/clips' },
+  { title: 'Voiceover', link: '/voiceover' },
+  { title: 'Contact', link: '/contact' },
+]
+
 const Navigation = ({ dots }) => (
   <ul className={navigation}>
-    <li>
-      <Link to="/about">About</Link>
-    </li>
-    {dots ? <span className={dotShowOnTablet}>·</span> : ''}
-    <li className={hideOnDesktop}>
-      <Link to="/photos">Photos</Link>
-    </li>
-    {dots ? <span className={dotShow}>·</span> : ''}
-    <li>
-      <Link to="/resume">Resume</Link>
-    </li>
-    {dots ? <span className={dotShow}>·</span> : ''}
-    <li>
-      <Link to="/clips">Clips</Link>
-    </li>
-    {dots ? <span className={dotShow}>·</span> : ''}
-    <li>
-      <Link to="/contact">Contact</Link>
-    </li>
+    {links.map(node => (
+      <>
+        <li className={node.title === 'Photos' ? hideOnDesktop : ''}>
+          <Link to={node.link}>{node.title}</Link>
+        </li>
+        {dots && node.title !== 'Photos' ? (
+          <span className={dotShow}>·</span>
+        ) : (
+          ''
+        )}
+      </>
+    ))}
   </ul>
 )
 
@@ -76,17 +78,8 @@ const dotShow = css`
     font-size: 1.5rem;
     color: var(--color-primary);
   }
-`
-const dotShowOnTablet = css`
-  display: none;
 
-  @media (min-width: 430px) {
-    display: inline;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-  }
-
-  @media (min-width: 1200px) {
+  &:last-of-type {
     display: none;
   }
 `

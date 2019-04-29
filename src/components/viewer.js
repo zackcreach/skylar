@@ -11,28 +11,38 @@ class Viewer extends React.PureComponent {
     super({ imageData })
     this.state = {
       gallery: imageData.allImageSharp.edges,
+      voiceover: imageData.imageSharp,
       currentImageIndex: 0,
       show: true,
     }
   }
+
   componentDidMount() {
-    setInterval(() => this.changeImage(), 7500)
+    if (window && window.location.pathname !== '/voiceover')
+      setInterval(() => this.changeImage(), 7500)
   }
+
   changeImage() {
     this.setState({
       show: !this.state.show,
     })
   }
+
   renderImage() {
-    const { gallery, currentImageIndex } = this.state
+    const { gallery, voiceover, currentImageIndex } = this.state
     return (
       <Img
-        fluid={gallery[currentImageIndex].node.fluid}
+        fluid={
+          window && window.location.pathname === '/voiceover'
+            ? voiceover.fluid
+            : gallery[currentImageIndex].node.fluid
+        }
         key={Date.now()}
         className={imageStyle}
       />
     )
   }
+
   render() {
     const { gallery, currentImageIndex, show } = this.state
     return (

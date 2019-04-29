@@ -31,6 +31,11 @@ class Layout extends React.PureComponent {
                 }
               }
             }
+            imageSharp(fluid: { originalName: { regex: "/voiceover/" } }) {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         `}
         render={data => (
