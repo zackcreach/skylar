@@ -7,21 +7,18 @@ import '../styles/styles.scss'
 import { css } from 'emotion'
 
 class Viewer extends React.PureComponent {
-  constructor({ imageData }) {
-    super({ imageData })
+  constructor(props) {
+    super(props)
     this.state = {
-      gallery: imageData.allImageSharp.edges,
-      voiceover: imageData.imageSharp,
+      gallery: props.imageData.allImageSharp.edges,
+      voiceover: props.imageData.imageSharp,
       currentImageIndex: 0,
       show: true,
     }
   }
 
   componentDidMount() {
-    if (
-      typeof window !== 'undefined' &&
-      window.location.pathname !== '/voiceover'
-    )
+    if (this.props.location.pathname !== '/voiceover/')
       setInterval(() => this.changeImage(), 7500)
   }
 
@@ -36,8 +33,7 @@ class Viewer extends React.PureComponent {
     return (
       <Img
         fluid={
-          typeof window !== 'undefined' &&
-          window.location.pathname === '/voiceover'
+          this.props.location.pathname === '/voiceover/'
             ? voiceover.fluid
             : gallery[currentImageIndex].node.fluid
         }

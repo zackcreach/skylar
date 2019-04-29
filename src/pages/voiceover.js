@@ -38,7 +38,7 @@ class Voiceover extends React.PureComponent {
             <Content>
               <h2>Commercial Demo</h2>
               <figure>
-                <audio className={audio} controls src="audio/voiceover.mp3">
+                <audio className={audio} controls src="/audio/voiceover.mp3">
                   Your browser does not support the
                   <code>audio</code> element.
                 </audio>

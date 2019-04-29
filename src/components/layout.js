@@ -63,7 +63,7 @@ class Layout extends React.PureComponent {
               </TransitionGroup> */}
               <div className={left}>{this.props.children}</div>
               <aside className={right}>
-                <Viewer imageData={data} />
+                <Viewer imageData={data} location={this.props.location} />
               </aside>
             </div>
           </div>
