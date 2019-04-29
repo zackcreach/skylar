@@ -18,7 +18,10 @@ class Viewer extends React.PureComponent {
   }
 
   componentDidMount() {
-    if (window && window.location.pathname !== '/voiceover')
+    if (
+      typeof window !== 'undefined' &&
+      window.location.pathname !== '/voiceover'
+    )
       setInterval(() => this.changeImage(), 7500)
   }
 
@@ -33,7 +36,8 @@ class Viewer extends React.PureComponent {
     return (
       <Img
         fluid={
-          window && window.location.pathname === '/voiceover'
+          typeof window !== 'undefined' &&
+          window.location.pathname === '/voiceover'
             ? voiceover.fluid
             : gallery[currentImageIndex].node.fluid
         }
