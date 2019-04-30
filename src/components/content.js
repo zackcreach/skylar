@@ -17,4 +17,8 @@ const content = css`
   @media (min-width: 788px) {
     padding: 110px 0 40px 0;
   }
+
+  a {
+    text-decoration: underline;
+  }
 `

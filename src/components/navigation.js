@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
 import { css } from 'emotion'
+import styled from '@emotion/styled'
 
 const links = [
   { title: 'About', link: '/about' },
@@ -16,16 +17,9 @@ const links = [
 const Navigation = ({ dots }) => (
   <ul className={navigation}>
     {links.map(node => (
-      <>
-        <li className={node.title === 'Photos' ? hideOnDesktop : ''}>
-          <Link to={node.link}>{node.title}</Link>
-        </li>
-        {dots && node.title !== 'Photos' ? (
-          <span className={dotShow}>·</span>
-        ) : (
-          ''
-        )}
-      </>
+      <Item title={node.title} dots={dots} key={node.title}>
+        <Link to={node.link}>{node.title}</Link>
+      </Item>
     ))}
   </ul>
 )
@@ -64,22 +58,33 @@ const navigation = css`
     transform: translateY(-1px);
   }
 `
-const hideOnDesktop = css`
-  @media (min-width: 1200px) {
+
+const Item = styled.li`
+  position: relative;
+
+  &[title='Photos'] {
+    @media (min-width: 1200px) {
+      display: ${props => (props.title === 'Photos' ? 'none' : 'block')};
+    }
+  }
+
+  &::after {
     display: none;
-    visibility: hidden;
+
+    @media (min-width: 430px) {
+      display: ${props => (props.dots ? 'block' : 'none')};
+      text-align: center;
+      content: '·';
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+  }
+
+  &:last-of-type::after {
+    display: none;
   }
 `
-const dotShow = css`
-  display: none;
 
-  @media (min-width: 430px) {
-    display: inline;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-  }
-
-  &:last-of-type {
-    display: none;
-  }
+const hideOnDesktop = css`
+  ${Item};
 `

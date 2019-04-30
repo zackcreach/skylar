@@ -5,25 +5,32 @@ import '../styles/styles.scss'
 import Header from '../components/header'
 import Content from '../components/content'
 import Transition from '../components/transition'
+import { css } from 'emotion'
+
+import imdb from '../images/imdb.svg'
 
 class About extends React.PureComponent {
   state = {
     width: 400,
     in: true,
   }
+
   componentDidMount() {
     this.handleResize()
     window.addEventListener('resize', this.handleResize)
     window.scrollTo(0, 0)
   }
+
   handleResize = () => {
     this.setState({
       width: this.container.offsetWidth || window.innerWidth,
     })
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
   }
+
   render() {
     return (
       <section>
@@ -31,35 +38,44 @@ class About extends React.PureComponent {
         <Transition show={this.state.in}>
           <div ref={node => (this.container = node)}>
             <Content>
-              <h2>Actor. Writer. Cat video enthusiast.</h2>
+              <h2>Actor. Writer. Voice Artist. Cat video enthusiast.</h2>
 
               <p>Hey there and welcome to my website!</p>
               <p>
-                I’m an actor local to Atlanta auditioning all over the
-                Southeast, but I made my journey to the fantastic HOT-Lanta
-                after a 5-year stint in Los Angeles where I received a Theater
-                Arts degree from The American Academy of Dramatic Arts and
-                studied at UCB, iO West, The Ivanna Chubbuck Studio, and various
-                other schools around town.
+                I’m local to Atlanta, but made the journey here only after
+                several years in Los Angeles were I received a Theater Arts
+                degree from The American Academy of Dramatic Arts. While in LA,
+                I also studied at UCB, iO West, The Ivanna Chubbuck Studio, and
+                various other schools around town.
               </p>
               <p>
-                If you’d like to see what I do, I perform on an improv team
-                called Big Poppa on Thursday nights at Village Theater as well
-                as on other teams like The Actor’s Worst Nightmare at Highwire
-                Comedy!
-              </p>
-              <p>
-                Along with acting, I write a{' '}
-                <a href="//lifelesswasteful.com">
-                  blog called Life Less Wasteful
+                I write sketch comedy that has been produced through{' '}
+                <a
+                  href="https://www.youtube.com/channel/UCrpqF-bBGvVb2IEyQ3nEFng"
+                  target="_blank"
+                >
+                  Respectful Productions
                 </a>{' '}
-                about my journey to live with less trash, ‘cause we all could be
-                a little kinder to the planet, y’know?
+                and also some more serious stuff that you’ll be able to see
+                soon!
               </p>
               <p>
-                So peruse my site, check out my blog and feel free to get in
-                contact with me if you have any questions. Have an awesome day!
+                I’m also a voice artist focused mainly on commercials, so if you
+                need a voice for your product, head on over to my voiceover page
+                to get a taste of this friendly, confident, millennial.
               </p>
+              <p>
+                If you’d like to see what I do in person, I perform regularly at
+                the Village Theater on Thursday nights at 9:30pm with my team
+                Big Poppa.
+              </p>
+              <p>
+                Peruse my site and feel free to get in contact with me if you
+                have any questions. Have an awesome day!
+              </p>
+              <a href="https://www.imdb.com/name/nm5897469/" target="_blank">
+                <img src={imdb} alt="IMDB Logo" class={iconImdb} />
+              </a>
             </Content>
           </div>
         </Transition>
@@ -67,5 +83,10 @@ class About extends React.PureComponent {
     )
   }
 }
+
+const iconImdb = css`
+  margin-top: 10px;
+  width: 60px;
+`
 
 export default About

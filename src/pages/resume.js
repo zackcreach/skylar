@@ -61,6 +61,11 @@ class Resume extends React.Component {
 
               <h2 className={heading}>Film</h2>
               <div className={row}>
+                <p className={colLeft}>The Glorias: A Life on the Road</p>
+                <p className={colMid}>Featured</p>
+                <p className={colRight}>June Pictures / Julie Taymor</p>
+              </div>
+              <div className={row}>
                 <p className={colLeft}>Godzilla: King of the Monsters</p>
                 <p className={colMid}>Featured</p>
                 <p className={colRight}>Legendary Ent./ Michael Dougherty</p>

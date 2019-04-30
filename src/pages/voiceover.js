@@ -43,7 +43,21 @@ class Voiceover extends React.PureComponent {
                   <code>audio</code> element.
                 </audio>
               </figure>
-              <p className={content}>More to come!</p>
+              <div className={content}>
+                <p>
+                  Coming from a background in theater and on-camera acting, my
+                  voiceover work is always grounded with honesty and heart. If
+                  you’re looking for a voice with flexibility, I’ve trained
+                  extensively in improv and perform regularly at theaters around
+                  Atlanta, so I’m always excited to use those skills.
+                </p>
+                <p>
+                  Words that describe me: Quirky, Warm, Conversational, Best
+                  Friend, Friendly, Intelligent, Youthful, Millennial, Fun,
+                  Knowledgeable, Sophisticated, Teacher, Magical, Storyteller,
+                  Wondrous, Approachable.
+                </p>
+              </div>
             </Content>
           </div>
         </Transition>

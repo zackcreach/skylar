@@ -76,7 +76,7 @@ class Layout extends React.PureComponent {
 export default Layout
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 }
 
 const flex = css`
