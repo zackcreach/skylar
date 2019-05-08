@@ -45,7 +45,7 @@ class Clips extends React.PureComponent {
               />
               <iframe
                 className={iframe}
-                src="https://www.youtube.com/embed/eF5fNyDVHaI"
+                src="https://www.youtube.com/embed/ba1nqM0NQ-c"
                 title="Clip 2"
                 allowFullScreen
               />
