@@ -42,13 +42,15 @@ class Resume extends React.Component {
                 <p className={colRight}>Tel. 843-882-7560</p>
               </div>
               <div className={row}>
-                <p className={colLeft}>Hair: Red</p>
+                <p className={colLeft}>Hair: Auburn</p>
                 <p className={colRight}>info@soltalent.com</p>
               </div>
               <div className={row}>
                 <p className={colLeft}>Eyes: Blue</p>
                 <p className={colRight}>
-                  <a href="http://www.soltalent.com">soltalent.com</a>
+                  <a href="http://www.soltalent.com" target="_blank">
+                    soltalent.com
+                  </a>
                 </p>
               </div>
 
@@ -61,47 +63,52 @@ class Resume extends React.Component {
 
               <h2 className={heading}>Film</h2>
               <div className={row}>
+                <p className={colLeft}>Hillbilly Elegy</p>
+                <p className={colMid}>Supporting (2020 Release)</p>
+                <p className={colRight}>RON HOWARD/Netflix</p>
+              </div>
+              <div className={row}>
                 <p className={colLeft}>The Glorias: A Life on the Road</p>
-                <p className={colMid}>Featured</p>
-                <p className={colRight}>June Pictures / Julie Taymor</p>
+                <p className={colMid}>Supporting (2020 Release)</p>
+                <p className={colRight}>Dir: Julie Taymor</p>
               </div>
               <div className={row}>
                 <p className={colLeft}>Godzilla: King of the Monsters</p>
-                <p className={colMid}>Featured</p>
-                <p className={colRight}>Legendary Ent./ Michael Dougherty</p>
+                <p className={colMid}>Supporting</p>
+                <p className={colRight}>WARNER BROS/Michael Dougherty</p>
               </div>
               <div className={row}>
                 <p className={colLeft}>Just Imagine</p>
-                <p className={colMid}>Lead</p>
-                <p className={colRight}>Sarah Moss</p>
+                <p className={colMid}>Starring</p>
+                <p className={colRight}>Dir: Sarah Moss</p>
               </div>
               <div className={row}>
-                <p className={colLeft}>Going Together</p>
-                <p className={colMid}>Featured</p>
-                <p className={colRight}>Sophie Webb</p>
+                <p className={colLeft}>Do I?</p>
+                <p className={colMid}>Starring</p>
+                <p className={colRight}>Dir: Nell Nakkan</p>
+              </div>
+              <div className={row}>
+                <p className={colLeft}>Lonely Liberal Island</p>
+                <p className={colMid}>Lead</p>
+                <p className={colRight}>Dir: Derek Evans</p>
               </div>
               <div className={row}>
                 <p className={colLeft}>The Actress</p>
+                <p className={colMid}>Lead</p>
+                <p className={colRight}>Dir: Nell Nakkan</p>
+              </div>
+              <div className={row}>
+                <p className={colLeft}>Going Together</p>
                 <p className={colMid}>Supporting</p>
-                <p className={colRight}>Nell Nakkan</p>
+                <p className={colRight}>Dir: Sophie Webb</p>
               </div>
               <div className={row}>
                 <p className={colLeft}>Man Up</p>
                 <p className={colMid}>Supporting</p>
-                <p className={colRight}>Cyrus Hogg</p>
-              </div>
-              <div className={row}>
-                <p className={colLeft}>Do I?</p>
-                <p className={colMid}>Lead</p>
-                <p className={colRight}>Nell Nakkan</p>
+                <p className={colRight}>Dir: Cyrus Hogg</p>
               </div>
 
               <h2 className={heading}>Theater</h2>
-              <div className={row}>
-                <p className={colLeft}>The MANologues</p>
-                <p className={colMid}>Ensemble</p>
-                <p className={colRight}>Switchyards</p>
-              </div>
               <div className={row}>
                 <p className={colLeft}>HuMan Up</p>
                 <p className={colMid}>Ensemble</p>
@@ -148,18 +155,8 @@ class Resume extends React.Component {
                 <p className={colRight}>AADA</p>
               </div>
               <div className={row}>
-                <p className={colLeft}>Major Barbara</p>
-                <p className={colMid}>Jenny</p>
-                <p className={colRight}>AADA</p>
-              </div>
-              <div className={row}>
                 <p className={colLeft}>Five Women Wearing the Same Dress</p>
                 <p className={colMid}>Meredith</p>
-                <p className={colRight}>AADA</p>
-              </div>
-              <div className={row}>
-                <p className={colLeft}>Once A Catholic</p>
-                <p className={colMid}>Mary Mooney</p>
                 <p className={colRight}>AADA</p>
               </div>
               <div className={rowAstrisk}>
@@ -168,62 +165,46 @@ class Resume extends React.Component {
                 </p>
               </div>
 
+              <h2 className={heading}>Commercial</h2>
+              <div className={row}>
+                <p className={colFull}>List/conflicts available upon request</p>
+              </div>
+
               <h2 className={heading}>Training</h2>
               <div className={row}>
-                <p className={colFull}>iO West – Los Angeles, CA</p>
-              </div>
-              <div className={row}>
                 <p className={colFull}>
-                  Ivanna Chubbuck Studio – Los Angeles, CA
-                </p>
-              </div>
-              <div className={row}>
-                <p className={colFull}>UCB Improv – Los Angeles, CA</p>
-              </div>
-              <div className={row}>
-                <p className={colFull}>
-                  L.A. On-Camera Training Center – Jamison Haase – Los Angeles,
-                  CA
+                  <b>Formal:</b> The American Academy of Dramatic Arts (LA)
                 </p>
               </div>
               <div className={row}>
                 <p className={colFull}>
-                  <b>
-                    The American Academy of Dramatic Arts, Associate of Arts
-                  </b>{' '}
-                  – Los Angeles, CA
+                  <b>Acting:</b> Ivanna Chubbuck Studio (LA), BGB Studio (ATL),
+                  L.A. On-Camera Training Center
                 </p>
               </div>
               <div className={row}>
                 <p className={colFull}>
-                  Sword Fights, Inc. – Stage Combat, Brian Danner – Los Angeles,
-                  CA
+                  <b>Comedy:</b> iO West, Upright Citizens Brigade (LA),
+                  Highwire Comedy (ATL), Village Theater Improv (ATL)
                 </p>
-              </div>
-              <div className={row}>
-                <p className={colFull}>Highwire Comedy Improv – Atlanta, GA</p>
-              </div>
-              <div className={row}>
-                <p className={colFull}>Village Theater Improv – Atlanta, GA</p>
-              </div>
-              <div className={row}>
-                <p className={colFull}>Drama Inc. Chubbuck – Atlanta, GA</p>
               </div>
 
               <h2 className={heading}>Special Skills</h2>
               <div className={row}>
-                <p className={colFull}>Instruments: Oboe, basic piano</p>
+                <p className={colFull}>
+                  <b>Instruments:</b> Oboe, basic piano
+                </p>
               </div>
               <div className={row}>
                 <p className={colFull}>
-                  Dialects: Standard British, Cockney, Irish, New York,
+                  <b>Dialects:</b> Standard British, Cockney, Irish, New York,
                   Southern, Valley Girl
                 </p>
               </div>
               <div className={row}>
                 <p className={colFull}>
-                  Other: Improv, yoga, rock climbing (bouldering), basic stage
-                  combat, basic ballet, eyebrow contortionist
+                  <b>Other:</b> Improv, yoga, rock climbing (bouldering), basic
+                  stage combat, basic ballet, eyebrow contortionist
                 </p>
               </div>
             </Content>
@@ -269,25 +250,29 @@ const col = css`
 
 const colLeft = css`
   ${col};
-  width: 42%;
+  width: 38%;
   text-align: left;
 `
 
 const colMid = css`
   ${col};
-  width: 16%;
+  width: 24%;
   text-align: left;
 `
 
 const colRight = css`
   ${col};
-  width: 42%;
+  width: 38%;
   text-align: right;
 `
 
 const colFull = css`
   ${col};
   width: 100%;
+
+  & b {
+    font-weight: 500;
+  }
 `
 
 export default Resume

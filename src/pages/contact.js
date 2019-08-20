@@ -55,7 +55,6 @@ class Contact extends React.PureComponent {
                   <p>
                     <a href="mailto:skylardenney1@gmail.com">Email</a>
                   </p>
-                  <p>304-906-8780</p>
                 </div>
               </div>
             </Content>

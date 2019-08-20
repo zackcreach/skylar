@@ -65,9 +65,9 @@ class About extends React.PureComponent {
                 to get a taste of this friendly, confident, millennial.
               </p>
               <p>
-                If you’d like to see what I do in person, I perform regularly at
-                the Village Theater on Thursday nights at 9:30pm with my team
-                Big Poppa.
+                If you’d like to see what I do in person, I perform regularly
+                around town with my teams Big Poppa and Consenting Adults. Shoot
+                me a message to find out when!
               </p>
               <p>
                 Peruse my site and feel free to get in contact with me if you
